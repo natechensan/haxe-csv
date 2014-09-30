@@ -16,10 +16,10 @@ The implementation is slightly verbose. Looking for improvement in the future.
 #Defining the CSV format:
 
 A string that is accepted as CSV format by this class should comply with the common rules of CSV:
--Every field can be wrapped by quotes.
--If the current field contains special character(namely '"', end of line character or the character used by seperator string), the field must be wrapped by quotes.
--If a '"' is wrapped by quotes, it should have an additional '"' after it. e.g.: "King James ""the Great"" of England"
--No additional character is allowed after the closing quote, a string format error will raise. e.g.: 20;;;"King James ""the Greate"" of" England;;;Male  is not allowed.
+- Every field can be wrapped by quotes.
+- If the current field contains special character(namely '"', end of line character or the character used by seperator string), the field must be wrapped by quotes.
+- If a '"' is wrapped by quotes, it should have an additional '"' after it. e.g.: "King James ""the Great"" of England"
+- No additional character is allowed after the closing quote, a string format error will raise. e.g.: 20;;;"King James ""the Greate"" of" England;;;Male  is not allowed.
 
 #Using Csv:
 
@@ -59,7 +59,9 @@ returns the an iterator of the iterators of each line. This is to follow the cus
 returns a CSV format string that complied the rules defined above.
 values must be a 2-D array of strings.
 
-`private eol:String; //end of line`
-`private seperator:String; //seperator`
+```
+private eol:String; //end of line
+private seperator:String; //seperator
+```
 
 Above two fields each have its getter and setter function. e.g.: `getEol()`, `setSeperator()`
