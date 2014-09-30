@@ -16,7 +16,6 @@ class Csv{
 	private var sepI:Int;
 	private var buffer:StringBuf;
 	private var arrayBuff:Array<String>;
-	//private var lines:Array<String>;
 
 	public function new(sep:String, ?endOfLine:String){
 		seperator = sep;
@@ -27,7 +26,6 @@ class Csv{
 		if(!validateSep()) throw "Seperator should have contain and only contain one or more than one of the same character.";
 		if(sep.indexOf(eol) != -1 || sep.indexOf("\"") != -1) throw "Seperator should not contain end of line character nor quotation mark.";
 		if(eol.length != 1) throw "end of line character should be just one character.";
-		//lines = data.split(eol);
 	}
 
 	public function setSeperator(sep:String):Void{
